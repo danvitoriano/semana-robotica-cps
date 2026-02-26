@@ -1,82 +1,72 @@
-# **Build your portfolio with Once UI's Magic Portfolio**
+# Semana Robótica CPS
 
-Magic Portfolio was built with [Once UI](https://once-ui.com) for [Next.js](https://nextjs.org). It requires Node.js v18.17+.
+Site oficial da **Semana Robótica CPS**, desenvolvido com [Next.js](https://nextjs.org). Requer Node.js v18.17+.
 
-**1. Clone the repository**
-```
-git clone https://github.com/once-ui-system/magic-portfolio.git
+## Requisitos
+
+- [Node.js](https://nodejs.org/) v18.17 ou superior
+- npm (incluído com o Node.js)
+
+## Instalação e execução
+
+**1. Clone o repositório**
+```bash
+git clone https://github.com/danvitoriano/semana-robotica-cps.git
+cd semana-robotica-cps
 ```
 
-**2. Install dependencies**
-```
+**2. Instale as dependências**
+```bash
 npm install
 ```
 
-**3. Run dev server**
-```
+**3. Inicie o servidor de desenvolvimento**
+```bash
 npm run dev
 ```
 
-**4. Edit config**
-```
-src/app/resources/config
-```
+Acesse [http://localhost:3000](http://localhost:3000) no navegador para visualizar o projeto.
 
-**5. Edit content**
-```
-src/app/resources/content (or content-i18n for localization)
-```
+## Onde editar
 
-**6. Create blog posts / projects**
+**Configurações gerais** (tema, rotas ativas, idioma, etc.)
 ```
-Add a new .mdx file to src/app/[locale]/blog/posts or src/app/[locale]/work/projects
+src/app/resources/config.js
 ```
 
-# **Features**
+**Conteúdo do site** (textos, links, informações exibidas nas páginas)
+```
+src/app/resources/content.js
+```
+> Para projetos com suporte a múltiplos idiomas, edite `src/app/resources/content-i18n.js`.
 
-## **Once UI**
-- All tokens, components & features of [Once UI](https://once-ui.com)
+**Posts do blog e projetos**
+```
+src/app/[locale]/blog/posts/   ← posts do blog (.mdx)
+src/app/[locale]/work/projects/ ← projetos (.mdx)
+```
 
-## **SEO**
-- Automatic open-graph and X image generation with next/og
-- Automatic schema and metadata generation based on the content file
+## Scripts disponíveis
 
-## **Design**
-- Responsive layout optimized for all screen sizes
-- Timeless design without heavy animations and motion
-- Endless customization options through [data attributes](https://once-ui.com/docs/theming)
+| Comando | Descrição |
+|---------|-----------|
+| `npm run dev` | Inicia o servidor de desenvolvimento |
+| `npm run build` | Gera a build de produção |
+| `npm run start` | Inicia o servidor em modo produção (requer build prévia) |
+| `npm run lint` | Executa o linter no código-fonte |
 
-## **Content**
-- Render sections conditionally based on the content file
-- Enable or disable pages for blog, work, gallery and about / CV
-- Generate and display social links automatically
-- Set up password protection for URLs
+## Como contribuir
 
-## **Localization (NEW)**
-- Magic Portfolio now supports localization with the next-intl library
-- See more info in resources/config.js
+1. Faça um fork do repositório.
+2. Crie uma branch para sua feature ou correção: `git checkout -b minha-feature`.
+3. Faça commit das suas alterações: `git commit -m "feat: descrição da mudança"`.
+4. Envie para o seu fork: `git push origin minha-feature`.
+5. Abra um Pull Request descrevendo o que foi alterado e o motivo.
 
-# **Authors**
+## Licença
 
-Connect with us on Threads or LinkedIn.
+Distribuído sob a licença CC BY-NC 4.0.
+- Uso comercial não é permitido.
+- É necessário dar os devidos créditos.
 
-Lorant Toth: [Threads](https://www.threads.net/@lorant.one), [LinkedIn](https://www.linkedin.com/in/tothlorant/)  
-Zsofia Komaromi: [Threads](https://www.threads.net/@zsofia_kom), [LinkedIn](https://www.linkedin.com/in/zsofiakomaromi/)
-
-Localization added by [François Hernandez](https://github.com/francoishernandez)
-
-# **Get involved**
-
-- Join the [Design Engineers Club on Discord](https://discord.com/invite/5EyAQ4eNdS) and share your portfolio with us!
-- Report a [bug](https://github.com/once-ui-system/magic-portfolio/issues/new?labels=bug&template=bug_report.md).
-
-# **License**
-
-Distributed under the CC BY-NC 4.0 License.
-- Commercial usage is not allowed.
-- Attribution is required.
-
-See `LICENSE.txt` for more information.
-
-# **Deploy with Vercel**
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&project-name=portfolio&repository-name=portfolio&redirect-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&demo-title=Magic%20Portfolio&demo-description=Showcase%20your%20designers%20or%20developer%20portfolio&demo-url=https%3A%2F%2Fdemo.magic-portfolio.com&demo-image=https%3A%2F%2Fonce-ui.com%2Fimages%2Ftemplates%2Fmagic-portfolio%2Fcover.jpg)
+Consulte o arquivo `LICENSE` para mais informações.
